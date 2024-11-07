@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hello World</title>
+  <link href='/style.css' rel='stylesheet'>
+  <style>
+      *{
+        font-family: 'Times New Roman', Times, serif;
+      }
+      .tengah{
+        display: flex;
+        justify-content: center;
+      }
+      .card{
+        width:40%;
+        box-shadow: 0 4px 8px 0px rgba(0, 0,0, 0.3);
+      }
+      .cardbody{
+        padding: 2px 16px;
+      }
+      .cardfooter{
+        padding: 8px;
+        background-color: blueviolet;
+        display: flex;
+        justify-content: right;
+      }
+      .card>h2{
+        padding: 0px 16px;
+      }
+      #hasil{
+        width: 100%;
+        height: 200px;
+        background-color: blue;
+        margin: 20px 0px;
+      }
+      label {
+        font-size: 17px;
+        font-weight: bold;
+      }
+      input [type="text"]{
+        width: 90%;
+        paddding: 10px;
+        margin: 8px 0px;
+      }
+
+  </style>
+</head>
+<body>
+
+     <div class="tengah">
+        <div class="card">
+  
+  <h2>Hitung luas persegi</h2>
+  <form>
+    <label>Nilai panjang</label>
+    <input type="text" id="nLB">
+
+    <label>Nilai lebar</label>
+    <input type="text" id="nPJ">
+
+  <button type="button" onclick="hitungluas();" class="btnhitung">Hitung luas</button>
+ </form>
+      </div>
+    </div>
+  <script>
+   function hitungluas(){
+    let pj = document.getElementById("nPJ").value 
+    let lb = document.getElementById("nLB").value
+
+    let LU = pj*lb
+    let PJLB = parseFloat(pj) + Number(Lb)
+    let KLL = 2*PJLB
+    
+    let hsl ="Hitung luas persegi dengan nilai<br>"
+        hsl += "panjang = "+ pj +"cm;<br>Lebar = "+ lb + "cm;<br>"
+        hsl += "Luas = Panjang x Lebar<br>"
+        hsl += "luas = " + pj + " x " + lb
+        hsl += "Luas = " + Lu + "cm<Sup>2</sup><br>"
+        hsl += "Hitung keliling persegi<br>"
+        hsl += "Keliling = 2 X (Panjang + Lebar)<br>"
+        hsl += "Keliling = 2 X (" + pj + " + " + lb + ")<br>"
+        hsl += "Keliling = 2 X " + PJLB + "<br>"
+        hsl += "Keliling = " + KLL + " cm<br>"
+
+    console.log("nilai dari panjang: "+ pj +"; Nilai Lebar: "+ lb)
+   }
+  </script>
+  
+
+</body>
+</html>
